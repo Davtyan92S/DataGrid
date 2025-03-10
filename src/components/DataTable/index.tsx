@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box, CircularProgress, Typography } from "@mui/material";
 import useFetchData from "../../hooks/useFetchData";
-import { baseColumns } from "./columns";
+import { baseColumns, getRowHeight } from "./columns";
 import ModalComponent from "../Modal";
 import { usePaginationState } from "../../hooks/usePaginationState";
 import { useSortFilterState } from "../../hooks/useSortFilterState";
@@ -50,6 +50,7 @@ const DataTable: React.FC = () => {
         paginationModel={paginationModel}
         onPaginationModelChange={updatePagination}
         sx={dataTableStyles.dataGrid} 
+        getRowHeight={getRowHeight}
       />
       <ModalComponent open={openModal} onClose={() => setOpenModal(false)} imageUrl={modalImage} />
     </Box>

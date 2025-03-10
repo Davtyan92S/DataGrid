@@ -2,7 +2,7 @@ import { SxProps, Theme } from "@mui/material";
 
 export const dataTableStyles: Record<string, SxProps<Theme>> = {
   container: {
-    height: 500,
+    height: 900,
     width: "100%",
     bgcolor: "background.paper",
     p: 2,
